@@ -4,7 +4,7 @@
 
 pkgname=('python-urwid' 'python2-urwid')
 pkgver=1.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Curses-based user interface library."
 license=('LGPL')
 arch=('i686' 'x86_64')
