@@ -15,7 +15,7 @@ license=('LGPL')
 depends=(
   'glibc'
   'python'
-  'python-typing-extensions'
+  'python-typing_extensions'
   'python-wcwidth'
 )
 makedepends=(
