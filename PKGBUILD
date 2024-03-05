@@ -33,6 +33,15 @@ checkdepends=(
   'python-pyzmq'
   'python-gobject'
 )
+optdepends=(
+  'python-gobject: for gobject integration'
+  'python-pyserial: for LCD and serial integration'
+  'python-exceptiongroup: for trio integration'
+  'python-pyzmq: for zmq integration'
+  'python-tornado: for tornado integration'
+  'python-trio: for trio integration'
+  'python-twisted: for twisted integration'
+)
 source=(
   $_name-$pkgver.tar.gz::https://github.com/urwid/urwid/archive/refs/tags/$pkgver.tar.gz
 )
