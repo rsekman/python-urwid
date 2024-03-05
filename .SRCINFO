@@ -12,7 +12,6 @@ pkgbase = python-urwid
 	checkdepends = python-trio
 	checkdepends = python-pyzmq
 	checkdepends = python-gobject
-	makedepends = git
 	makedepends = python-build
 	makedepends = python-installer
 	makedepends = python-setuptools
@@ -20,10 +19,10 @@ pkgbase = python-urwid
 	makedepends = python-wheel
 	depends = glibc
 	depends = python
-	depends = python-typing-extensions
+	depends = python-typing_extensions
 	depends = python-wcwidth
-	source = git+https://github.com/urwid/urwid.git#commit=91cd0dde100c55c96dba5c06dd8a19b220947942
-	sha256sums = SKIP
-	sha512sums = SKIP
+	source = urwid-2.6.1.tar.gz::https://github.com/urwid/urwid/archive/refs/tags/2.6.1.tar.gz
+	sha256sums = 0e54b1c459ccac1dc48bb98ae9e3fda160ca1239ee3a78fd70ad0df2987fcf08
+	sha512sums = 6c02ee2fad986ca4e82e4fc89dbc1ba55c7dfc5d73acc0da5bf5dd1b1a7927b5d9574a7743c342fb67fae79d6e1be9294ccfe728db856ca74a6277d0771963e5
 
 pkgname = python-urwid

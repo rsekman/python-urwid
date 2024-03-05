@@ -6,7 +6,6 @@
 _name=urwid
 pkgname=python-urwid
 pkgver=2.6.1
-_commit=91cd0dde100c55c96dba5c06dd8a19b220947942
 pkgrel=1
 pkgdesc='Curses-based user interface library'
 url='https://urwid.org/'
@@ -19,7 +18,6 @@ depends=(
   'python-wcwidth'
 )
 makedepends=(
-  'git'
   'python-build'
   'python-installer'
   'python-setuptools'
@@ -36,28 +34,23 @@ checkdepends=(
   'python-gobject'
 )
 source=(
-  git+https://github.com/$_name/$_name.git#commit=$_commit
+  $_name-$pkgver.tar.gz::https://github.com/urwid/urwid/archive/refs/tags/$pkgver.tar.gz
 )
-sha256sums=('SKIP')
-sha512sums=('SKIP')
-
-pkgver() {
-  cd $_name
-  git describe --tags | sed 's/^release-//;s/\([^-]*-g\)/r\1/;s/-/./g'
-}
+sha256sums=('0e54b1c459ccac1dc48bb98ae9e3fda160ca1239ee3a78fd70ad0df2987fcf08')
+sha512sums=('6c02ee2fad986ca4e82e4fc89dbc1ba55c7dfc5d73acc0da5bf5dd1b1a7927b5d9574a7743c342fb67fae79d6e1be9294ccfe728db856ca74a6277d0771963e5')
 
 build() {
-  cd $_name
-  python -m build --wheel --no-isolation
+  cd $_name-$pkgver
+  SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver python -m build --wheel --no-isolation
 }
 
 check() {
-  cd $_name/tests
-  pytest -v
+  cd $_name-$pkgver
+  pytest -vv tests
 }
 
 package() {
-  cd $_name
+  cd $_name-$pkgver
   python -m installer --destdir="$pkgdir" dist/*.whl
 }
 
