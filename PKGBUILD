@@ -10,7 +10,7 @@ pkgrel=1
 pkgdesc='Curses-based user interface library'
 url='https://urwid.org/'
 arch=('x86_64')
-license=('LGPL')
+license=('LGPL-2.1-only')
 depends=(
   'glibc'
   'python'
