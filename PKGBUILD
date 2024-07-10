@@ -5,7 +5,7 @@
 
 _name=urwid
 pkgname=python-urwid
-pkgver=2.6.14
+pkgver=2.6.15
 pkgrel=1
 pkgdesc='Curses-based user interface library'
 url='https://urwid.org/'
@@ -44,8 +44,8 @@ optdepends=(
 source=(
   $_name-$pkgver.tar.gz::https://github.com/urwid/urwid/archive/refs/tags/$pkgver.tar.gz
 )
-sha256sums=('86cab302ac032074355dc82c9d5ee5e7112ea90dbbcd9be4444f6f765f5a0574')
-sha512sums=('929ee5c477cb6421f3e37c184ec3d4d6f386e3e976f7e52ee461d914f0628e8f4878e6345277ac7071bd84aa9c6b6601d7df66cc1d7b9cf91fc8a0d46568a31d')
+sha256sums=('99b36c3fcc09ab0b854ea47b60d9f99169b16cb26308f5c264a7c72373be6990')
+sha512sums=('03d6de4d406da2b7ebd65f1ea51b915e13138da68bff9f80eb3498437d0e76a09000b441054624b1b8d1d38de89469428faae239314a41c7f143f85e5ab8648d')
 
 build() {
   cd $_name-$pkgver
